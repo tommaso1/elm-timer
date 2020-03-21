@@ -1,4 +1,4 @@
-var CACHE_NAME = 'timer-cache-v1';
+var CACHE_NAME = 'cache-v1';
 var urlsToCache = [
   '/',
   '/main.css',
