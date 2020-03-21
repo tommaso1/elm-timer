@@ -5672,6 +5672,9 @@ var $author$project$Main$classFromModel = function (model) {
 	}
 };
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $author$project$Main$formatSeconds = function (i) {
+	return (i > 9) ? $elm$core$String$fromInt(i) : ('0' + $elm$core$String$fromInt(i));
+};
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$input = _VirtualDom_node('input');
@@ -5726,9 +5729,9 @@ var $author$project$Main$setMinutes = function (s) {
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$view = function (model) {
-	var second = $elm$core$String$fromInt(
+	var second = $author$project$Main$formatSeconds(
 		A2($elm$core$Basics$modBy, 60, model.q));
-	var minutes = $elm$core$String$fromInt(
+	var minutes = $author$project$Main$formatSeconds(
 		A2($elm$core$Basics$modBy, 60, (model.q / 60) | 0));
 	return A2(
 		$elm$html$Html$div,

@@ -79,8 +79,8 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
   let
-    second = String.fromInt(modBy 60 model.secondsLeft)
-    minutes = String.fromInt(modBy 60 (model.secondsLeft // 60))
+    second = formatSeconds(modBy 60 model.secondsLeft)
+    minutes = formatSeconds(modBy 60 (model.secondsLeft // 60))
   in
   div [ class "container" ] [
       div [ class "circle-container" ] [
@@ -97,7 +97,8 @@ classFromModel model = case model.animationState of
        Done -> "done"
        Play -> "play"
         
-
+formatSeconds : Int -> String
+formatSeconds i = if i > 9 then String.fromInt i else "0" ++ String.fromInt i
 
 setMinutes : String -> Msg
 setMinutes s = case String.toInt s of 
