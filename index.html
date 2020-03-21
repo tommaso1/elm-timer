@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<pre id="elm"></pre>
+<script src="main.js"></script>
+<script>
+	var app = Elm.Main.init({
+  		node: document.getElementById('elm')
+	});
+
+	const playAudio = async () => {
+		var audio = new Audio('when.mp3');
+		audio.play();
+		for(let i = 0; i < 10; i++) {
+			await new Promise(reslove => setTimeout(reslove, 500));
+			var audio = new Audio('when.mp3');
+			audio.play();		
+		}
+	}; 
+
+
+	app.ports.playNotification.subscribe(function(data) {
+		var audio = new Audio('when.mp3');
+		playAudio();
+	});
+
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			});
+		});
+	}
+
+
+</script>
+</body>
+</html>
