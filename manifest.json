@@ -3,7 +3,7 @@
   "short_name": "Timer elm application",
   "description": "Testing elm and pwa",
   "lang": "en",
-  "start_url": "/",
+  "start_url": "/elm-timer/",
   "display": "standalone",
   "theme_color": "#333333",
   "icons": [
