@@ -1,9 +1,5 @@
 var CACHE_NAME = 'cache-v3';
 var urlsToCache = [
-  '/',
-  '/main.css',
-  '/main.js',
-  '/when.mp3',
   '/elm-timer/',
   '/elm-timer/main.css',
   '/elm-timer/main.js',
