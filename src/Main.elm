@@ -80,7 +80,7 @@ view : Model -> Html Msg
 view model =
   let
     second = formatSeconds(modBy 60 model.secondsLeft)
-    minutes = formatSeconds(modBy 60 (model.secondsLeft // 60))
+    minutes = formatSeconds(model.secondsLeft // 60)
   in
   div [ class "container" ] [
       div [ class "circle-container" ] [

@@ -5731,8 +5731,7 @@ var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$view = function (model) {
 	var second = $author$project$Main$formatSeconds(
 		A2($elm$core$Basics$modBy, 60, model.q));
-	var minutes = $author$project$Main$formatSeconds(
-		A2($elm$core$Basics$modBy, 60, (model.q / 60) | 0));
+	var minutes = $author$project$Main$formatSeconds((model.q / 60) | 0);
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
