@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Main</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=4.0, minimum-scale=0.86"> 
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="manifest" href="manifest.json">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet"> 
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=4.0, minimum-scale=0.86">
 </head>
 
 <body>
@@ -20,11 +21,6 @@
 	const playAudio = async () => {
 		var audio = new Audio('when.mp3');
 		audio.play();
-		for(let i = 0; i < 10; i++) {
-			await new Promise(reslove => setTimeout(reslove, 500));
-			var audio = new Audio('when.mp3');
-			audio.play();		
-		}
 	}; 
 
 
