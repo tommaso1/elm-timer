@@ -1,22 +1,21 @@
 {
-  "short_name": "Timer",
-  "name": "Timer elm application",
+  "name": "Timer",
+  "short_name": "Timer elm application",
   "description": "Testing elm and pwa",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#333333",
   "icons": [
     {
-      "src": "alamr192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "alarm512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     },
     {
-      "src": "alarm512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "alarm192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
-  ],
-  "start_url": "/",
-  "background_color": "#333333",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#333333"
+  ]
 }
